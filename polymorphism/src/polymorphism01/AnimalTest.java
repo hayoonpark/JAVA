@@ -1,4 +1,4 @@
-package ploymorphism01;
+package polymorphism01;
 
 import java.util.ArrayList;
 
@@ -6,6 +6,9 @@ class Animal{
 	
 	public void move() {
 		System.out.println("동물이 웁직입니다");
+	}
+	public void eating() {
+		
 	}
 }
 class Human extends Animal {
@@ -22,11 +25,17 @@ class Tiger extends Animal{
 	public void move() {
 		System.out.println("호랑이가 네 발로 뜁니다");
 	}
+	public void huntiong() {
+		System.out.println("호랑이가 사녕을 합니다");
+	}
 }
 
 class Eagle extends Animal{
 	public void move() {
 		System.out.println("독수리가 하늘을 날아갑니다");
+	}
+	public void flying() {
+		System.out.println("독수리가 날개를 펴고 멀리 날아갑니다");
 	}
 }
 
@@ -39,6 +48,15 @@ public class AnimalTest {
 		Animal tAnimal = new Tiger();
 		Animal eAnimal = new Eagle();
 		
+//		if(hAnimal instanceof Human) {
+//			Human human = (Human)hAnimal;
+//			human.readBooks();
+//		}
+//		
+//		if(hAnimal instanceof Eagle) {
+//			Eagle human1 =(Eagle)hAnimal;
+//		}
+		
 //		AnimalTest test = new AnimalTest();
 //		test.moveAnimal(hAnimal);
 //		test.moveAnimal(tAnimal);
@@ -49,11 +67,35 @@ public class AnimalTest {
 		animalList.add(tAnimal);
 		animalList.add(eAnimal);
 		
-		for(Animal animal : animalList) {
-			animal.move();
-		}
+		AnimalTest test =new AnimalTest();
+		test.testDownCasting(animalList);
+		
+//		for(Animal animal : animalList) {
+//			animal.move();
+//		}
 	}
 
+	public void testDownCasting(ArrayList<Animal> list) {
+		
+		for(int i =0; i<list.size(); i++) {
+			Animal animal = list.get(i);
+			
+			if(animal instanceof Human) {
+				Human human = (Human)animal;
+				human.readBooks();
+			}else if(animal instanceof Tiger) {
+				Tiger tiger = (Tiger)animal;
+				tiger.huntiong();
+			}else if(animal instanceof Eagle) {
+				Eagle eagle = (Eagle)animal;
+				eagle.flying();
+			}else {
+				System.out.println("error");
+			}
+		}
+	}
+	
+	
 	public void moveAnimal(Animal animal) {
 		animal.move();
 	}
