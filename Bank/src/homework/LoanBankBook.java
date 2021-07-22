@@ -5,7 +5,7 @@ import java.io.IOException;
 
 public class LoanBankBook extends BankBook {
 	protected int montlyPaidAmount;
-	private static int count; //±âÃÊÅ¬·¡½º¿¡ X 
+	private static int count; //ê¸°ì´ˆí´ë˜ìŠ¤ì— X 
 	
 
 	public LoanBankBook() {
@@ -15,13 +15,13 @@ public class LoanBankBook extends BankBook {
 	}
 
 	@Override
-	public void input() { //Exceiption¼±¾ğ »ı·« °¡´É(±âÃÊÅ¬·¡½º¿¡ ÀÖÀ»°æ¿ì)
-		System.out.println("´ëÃâ ±İ¾×?");
+	public void input() { //Exceiptionì„ ì–¸ ìƒëµ ê°€ëŠ¥(ê¸°ì´ˆí´ë˜ìŠ¤ì— ìˆì„ê²½ìš°)
+		System.out.println("ëŒ€ì¶œ ê¸ˆì•¡?");
 		try {
 			total = Long.parseLong(reader.readLine());
 		} catch (NumberFormatException e) {
-			System.out.println(",³ª Æ¯¼ö¹®ÀÚ »ç¿ëÇÏÁö ¸¶½Ã°í ¼ıÀÚ¸¸ ¾²¼¼¿ä");
-			input(); //Àç±ÍÈ£Ãâ
+			System.out.println(",ë‚˜ íŠ¹ìˆ˜ë¬¸ì ì‚¬ìš©í•˜ì§€ ë§ˆì‹œê³  ìˆ«ìë§Œ ì“°ì„¸ìš”");
+			input(); //ì¬ê·€í˜¸ì¶œ
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -37,13 +37,13 @@ public class LoanBankBook extends BankBook {
 	
 	@Override
 	public void output() {
-		System.out.println("¡Ú´ëÃâ ÅëÀå °³¼³ ¿Ï·á¡Ú");
-		System.out.println("°èÁÂ¹øÈ£ : " + accountNum);
-		System.out.println("±â°£(³â) : " + period);
-		System.out.println("´ëÃâ±İ¾× : " + total);
-		System.out.println("ÀÌÀ² : " + rate* 100 + "%");
-		System.out.println("ÀÌÀÚ : " + interest );
-		System.out.println("¿ù ³³ÀÔ±İ¾× : " + montlyPaidAmount);
+		System.out.println("â˜…ëŒ€ì¶œ í†µì¥ ê°œì„¤ ì™„ë£Œâ˜…");
+		System.out.println("ê³„ì¢Œë²ˆí˜¸ : " + accountNum);
+		System.out.println("ê¸°ê°„(ë…„) : " + period);
+		System.out.println("ëŒ€ì¶œê¸ˆì•¡ : " + total);
+		System.out.println("ì´ìœ¨ : " + rate* 100 + "%");
+		System.out.println("ì´ì : " + interest );
+		System.out.println("ì›” ë‚©ì…ê¸ˆì•¡ : " + montlyPaidAmount);
 	}
 
 	

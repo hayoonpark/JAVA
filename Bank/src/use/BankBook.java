@@ -16,8 +16,8 @@ public class BankBook {
 		Scanner scn =new Scanner(System.in);
 		
 
-		System.out.println("ÅëÀå °³¼³ ¸Ş´ºÀÔ´Ï´Ù. °³¼³À» ¿øÇÏ´Â ÅëÀåÀÇ ¹øÈ£¸¦ ´©¸£¼¼¿ä" );
-		System.out.println("[1]ÀúÃà ÅëÀå / [2] Àû±İ ÅëÀå / [3] ´ëÃâ ÅëÀå / [0] Á¾·á ");
+		System.out.println("í†µì¥ ê°œì„¤ ë©”ë‰´ì…ë‹ˆë‹¤. ê°œì„¤ì„ ì›í•˜ëŠ” í†µì¥ì˜ ë²ˆí˜¸ë¥¼ ëˆ„ë¥´ì„¸ìš”" );
+		System.out.println("[1]ì €ì¶• í†µì¥ / [2] ì ê¸ˆ í†µì¥ / [3] ëŒ€ì¶œ í†µì¥ / [0] ì¢…ë£Œ ");
 		
 		int selectNum = scn.nextInt();
 		switch(selectNum) {
@@ -40,7 +40,7 @@ public class BankBook {
 			loan.output();
 			break;
 		case 0:
-			System.out.println("Á¾·áÇÕ´Ï´Ù");
+			System.out.println("ì¢…ë£Œí•©ë‹ˆë‹¤");
 			break;
 		}
 	}

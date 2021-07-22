@@ -13,13 +13,13 @@ public class InstallmentSavingBankBook extends BankBook {
 	}
 
 	@Override
-	public void input() { //Exceiption¼±¾ğ »ı·« °¡´É(±âÃÊÅ¬·¡½º¿¡ ÀÖÀ»°æ¿ì)
-		System.out.println("¿ù ÀÔ±İ ±İ¾×?");
+	public void input() { //Exceiptionì„ ì–¸ ìƒëµ ê°€ëŠ¥(ê¸°ì´ˆí´ë˜ìŠ¤ì— ìˆì„ê²½ìš°)
+		System.out.println("ì›” ì…ê¸ˆ ê¸ˆì•¡?");
 		try {
 			montlyDeposits = Integer.parseInt(reader.readLine());
 		} catch (NumberFormatException e) {
-			System.out.println(",³ª Æ¯¼ö¹®ÀÚ »ç¿ëÇÏÁö ¸¶½Ã°í ¼ıÀÚ¸¸ ¾²¼¼¿ä");
-			input(); //Àç±ÍÈ£Ãâ
+			System.out.println(",ë‚˜ íŠ¹ìˆ˜ë¬¸ì ì‚¬ìš©í•˜ì§€ ë§ˆì‹œê³  ìˆ«ìë§Œ ì“°ì„¸ìš”");
+			input(); //ì¬ê·€í˜¸ì¶œ
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -36,13 +36,13 @@ public class InstallmentSavingBankBook extends BankBook {
 	
 	@Override
 	public void output() {
-		System.out.println("¡ÚÀû±İ ÅëÀå °³¼³ ¿Ï·á¡Ú");
-		System.out.println("°èÁÂ¹øÈ£ : " + accountNum);
-		System.out.println("±â°£(³â) : " + period);
-		System.out.println("¿ù ³³ÀÓ±İ¾× : " +montlyDeposits);
-		System.out.println("ÀÌÀ² : " + rate* 100 + "%");
-		System.out.println("ÀÌÀÚ : " + interest );
-		System.out.println("¸¸±âÈ¯±İ¾× : " + maturityAmount);
+		System.out.println("â˜…ì ê¸ˆ í†µì¥ ê°œì„¤ ì™„ë£Œâ˜…");
+		System.out.println("ê³„ì¢Œë²ˆí˜¸ : " + accountNum);
+		System.out.println("ê¸°ê°„(ë…„) : " + period);
+		System.out.println("ì›” ë‚©ì„ê¸ˆì•¡ : " +montlyDeposits);
+		System.out.println("ì´ìœ¨ : " + rate* 100 + "%");
+		System.out.println("ì´ì : " + interest );
+		System.out.println("ë§Œê¸°í™˜ê¸ˆì•¡ : " + maturityAmount);
 	}
 
 

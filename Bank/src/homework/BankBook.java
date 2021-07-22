@@ -20,16 +20,16 @@ public abstract class BankBook {
 		if(reader == null) {
 			reader = new BufferedReader(
 						new InputStreamReader(System.in));
-				//system.in(inputStream)À» Reader·Î º¯È¯
+				//system.in(inputStream)ì„ Readerë¡œ ë³€í™˜
 		}
-		System.out.print("°í°´ ÀÌ¸§ :");
+		System.out.print("ê³ ê° ì´ë¦„ :");
 		
 		try {
 			custName = reader.readLine();
-			//???? subclass¿¡¼­ OverrideÇÑ ¸Ş¼Òµå È£Ãâ
+			//???? subclassì—ì„œ Overrideí•œ ë©”ì†Œë“œ í˜¸ì¶œ
 			input();
-			System.out.print("±â°£(³â´ÜÀ§)?");
-			period = reader.read() - 48 ; //¾Æ½ºÅ°ÄÚµå·Î Ãâ·ÂµÇ±â¿¡ -48ÇØÁÖ±â
+			System.out.print("ê¸°ê°„(ë…„ë‹¨ìœ„)?");
+			period = reader.read() - 48 ; //ì•„ìŠ¤í‚¤ì½”ë“œë¡œ ì¶œë ¥ë˜ê¸°ì— -48í•´ì£¼ê¸°
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
