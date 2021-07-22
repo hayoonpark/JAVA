@@ -1,0 +1,27 @@
+c기초클래스 BankBook
+	-고객이름	custName : String
+	-계좌번호	accontNum : String ??counting??
+	-기간		period : int 년단위
+	-이율		rate : double
+	-이자액	interest : long
+	-총금액	total : long
+	 (만기시환금액,대출금액)	
+	입력();
+	연산();
+	출력();
+	
+	c저축통장 
+	-
+		
+	c적금통장
+		
+	c대출통장
+	-얼마빌릴건지
+	-월입금금액
+	
+		
+c사용클래스 -BankStart
+		실행()
+		1.저축 2.적금 3.대출
+		입력()
+		출력()
